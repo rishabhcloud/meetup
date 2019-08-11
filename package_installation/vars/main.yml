@@ -1,0 +1,7 @@
+---
+# only place the common variables here
+
+common_packages:
+  - vim
+  - emacs
+  - unzip

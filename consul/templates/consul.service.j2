@@ -1,0 +1,11 @@
+[Unit]
+Description=Consul
+Documentation=https://www.consul.io/
+
+[Service]
+ExecStart=/usr/local/bin/consul agent -server -ui -data-dir=/tmp/consul -node=consul-01 -bind=0.0.0.0 -config-dir=/etc/consul.d/
+ExecReload=/bin/kill -HUP $MAINPID
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

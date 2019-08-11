@@ -1,0 +1,14 @@
+---
+- include_vars: "{{item}}"
+  with_first_found:
+    - "../vars/{{ ansible_distribution }}.yml"
+#    - "../vars/{{ ansible_os_family }}.yml"
+  when: package_name is not defined
+
+# tasks file for package_installation
+- name: Install packages
+  package: name={{package_name}} state=present
+
+# common packages file
+- name: Install common packages
+  package: name={{common_packages}} state=present

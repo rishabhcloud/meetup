@@ -1,0 +1,10 @@
+---
+# tasks file for deploy-consul
+
+- name: Install Packages
+  import_role:
+    name: package_installation
+
+- name: Install Consul
+  import_role:
+    name: consul

@@ -1,0 +1,6 @@
+---
+# variable list for package names for ubuntu operating system
+package_name:
+  - apache2
+  - redis-server
+  - wget

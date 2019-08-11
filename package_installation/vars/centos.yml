@@ -1,0 +1,5 @@
+---
+# vars file that will apply to os type centos
+package_name:
+  - httpd
+  - wget
